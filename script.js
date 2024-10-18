@@ -49,11 +49,13 @@ linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 
 export function aufgabe02(args) {
   const input = args
-  const result = []
+  const result = [] // Das ist die Resultatliste
 
 // Läuft Zeichen für Zeichen über den ganzen text
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
+    // Hänge das aktuelle Zeichen doppelt an.
     result.push (currentElement)
     result.push (currentElement)
   }

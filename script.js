@@ -28,7 +28,6 @@ export function aufgabe01(args) {
     // `currentElement`, damit es explizit ist womit wir arbeiten, aber auch
     // damit wir nicht so viele Klammern schreiben müssen.
     const currentElement = input[i]
-
     if (currentElement === "e")
     //do nothing
     } else if(currentElement === "E"){

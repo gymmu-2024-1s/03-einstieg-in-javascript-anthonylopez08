@@ -62,3 +62,24 @@ export function aufgabe02(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const regex = /e/gi // Regex, um alle "e" und "E" zu finden
+  const matches = input.match(regex)
+
+  // Gibt die Anzahl der gefundenen Vorkommen an
+  return matches ? matches.length : 0
+}
+
+// Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe04(args) {
+  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  const words = input.split(/\s+/) // Teilt den Text in Wörter auf
+  return input.length > 0 ? words.length : 0 // Gibt die Anzahl der Wörter zurück
+}
+
+// Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)

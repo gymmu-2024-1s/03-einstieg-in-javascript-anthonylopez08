@@ -91,3 +91,11 @@ export function aufgabe05(args) {
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  return /[+"@%/)(=?^'!£$-_,;.:äöüé&]/.test(input) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist
+}
+
+// Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)

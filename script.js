@@ -78,8 +78,16 @@ linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 export function aufgabe04(args) {
   const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
   const words = input.split(/\s+/) // Teilt den Text in Wörter auf
-  return input.length > 0 ? words.length : 0 // Gibt die Anzahl der Wörter zurück
+  return input.length > 0 ? words.length : 0 // Gibt die Anzahl der Wörter an
 }
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
+export function aufgabe05(args) {
+  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  return /[A-Z]/.test(input) // Überprüft, ob mindestens ein Großbuchstabe vorhanden ist
+}
+
+// Beispiel für den Aufruf
+linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)

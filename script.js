@@ -99,3 +99,14 @@ export function aufgabe06(args) {
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+/*************  ✨ Codeium Command 🌟  *************/
+export function aufgabe07(args) {
+  const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
+  return input.includes("und") // Überprüft, ob das Wort "und" enthalten ist
+}
+
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+// TODO: Schreibe eine Function die testet ob das Wort "unD" vorkommt für aufgabe 07.
+
+// TODO: Schreibe eine Function

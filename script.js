@@ -76,7 +76,7 @@ export function aufgabe03(args) {
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
-  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
   const words = input.split(/\s+/) // Teilt den Text in Wörter auf
   return input.length > 0 ? words.length : 0 // Gibt die Anzahl der Wörter an
 }
@@ -85,7 +85,7 @@ export function aufgabe04(args) {
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
-  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
   return /[A-Z]/.test(input) // Überprüft, ob mindestens ein Großbuchstabe vorhanden ist
 }
 
@@ -93,7 +93,7 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  const input = args.trim() // Entferne führende und nachfolgende Leerzeichen
+  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
   return /[+"@%/)(=?^'!£$-_,;.:äöüé&]/.test(input) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist
 }
 
@@ -102,11 +102,10 @@ linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
   const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
-  return input.includes("und") // Überprüft, ob das Wort "und" enthalten ist
+  return input.includes("und") // Mit Variable.includes("und") kann getestet werden, ob die Zeichenkette "und" in der Variable vorkommt.
 }
 
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
-// TODO: Schreibe eine Function die testet ob das Wort "unD" vorkommt für aufgabe 07.
 
 export function aufgabe08(args) {
   const input = args.replace(/e/g, "3") // ersetze alle "e" mit "3"
@@ -114,3 +113,16 @@ export function aufgabe08(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
+  return input.length === 6 // Testet, ob die Eingabe genau 6 Zeichen lang ist
+}
+
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe10(args) {
+  const regex = /^#[0-9A-F]{6}$/i // Regex to test for a valid RGB Hex code
+  return regex.test(args)
+}
+linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)

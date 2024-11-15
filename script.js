@@ -92,7 +92,6 @@ linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 /*************  ✨ Codeium Command 🌟  *************/
 export function aufgabe05(args) {
-  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
   return /[A-Z]/.test(input) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist
 }
 
@@ -100,7 +99,6 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
   return /[+"@%/)(=?^'!£$-_,;.:äöüé&]/.test(input) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist
 }
 
@@ -122,7 +120,7 @@ export function aufgabe08(args) {
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
 
 export function aufgabe09(args) {
-  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
+  const input = args
   return input.length === 6 // Testet, ob die Eingabe genau 6 Zeichen lang ist
 }
 
@@ -140,3 +138,60 @@ export function aufgabe11(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
+
+export function aufgabe12(args) {
+  const input = args
+  return input.indexOf("e") // Gib die Position des ersten "e" in einem Text an.
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe13(args) {
+  const input = args
+  return input.lastIndexOf("e") // Gib die Position des letzten "e" in einem Text an.
+}
+linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "e") {
+      count++
+      if (count === 3) {
+        return i
+      }
+    }
+  }
+  return -1 // Return -1 if there is no third "e"
+}
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe15(args) {
+  const input = args
+  const firstSpace = input.indexOf(" ")
+  return firstSpace === -1 ? input : input.substring(0, firstSpace)
+}
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe16(args) {
+  const input = args
+  const index = input.indexOf("$")
+  if (index === -1) {
+    return [input, ""]
+  }
+  return [input.substring(0, index), input.substring(index + 1)]
+}
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function aufgabe17(args) {
+  const input = args
+  return input.split(",")
+}
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
+/*************  ✨ Codeium Command 🌟  *************/
+export function aufgabe18(args) {
+  const [name, alter] = args.split(" ")
+  return `Sie heissen ${name} und sind ${alter} Jahre alt`
+}
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)

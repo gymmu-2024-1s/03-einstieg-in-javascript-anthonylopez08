@@ -77,24 +77,23 @@ linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
   const input = args // Erstelle eine Zählervariable in der Eingabe
- let count = 0
- for (let i = 0; i < input.length; i++) {}
- const (currentElement) = input[i]
- if (currentElement === " ") {
-  count=count+1
- }
- // Gib count +1 zurück, weil es ein Wort mehr gibt wie Leerzeichen
- return count + 1
+  let count = 0
+  for (let i = 0; i < input.length; i++) {}
+  const currentElement = input[i]
+  if (currentElement === " ") {
+    count = count + 1
+  }
+  // Gib count +1 zurück, weil es ein Wort mehr gibt wie Leerzeichen
+  return count + 1
 }
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
+/*************  ✨ Codeium Command 🌟  *************/
 export function aufgabe05(args) {
-  const input = args.
-  if (currentElement === "ABCDEFGHIJKLMNOPQRSTUVWXYZ") {
-
-  }
+  const input = args.trim() // Mit ".Trim" entfernen wir alle führenden und nachfolgenden Leerzeichen der Variable.
+  return /[A-Z]/.test(input) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist
 }
 
 // Beispiel für den Aufruf
@@ -135,4 +134,9 @@ export function aufgabe10(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
-// TODO:Gib den ASCII code eines einzelnen Buchstabens an.
+export function aufgabe11(args) {
+  const input = args
+  return input.charCodeAt(0) // Gib den ASCII code eines einzelnen Buchstabens an.
+}
+
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)

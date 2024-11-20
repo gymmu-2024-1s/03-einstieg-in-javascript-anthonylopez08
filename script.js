@@ -65,14 +65,17 @@ linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
 
 export function aufgabe03(args) {
   const input = args
-  const regex = /e/gi // Regex, um alle "e" und "E" zu finden
-  const matches = input.match(regex)
-
-  // Gibt die Anzahl der gefundenen Vorkommen an
-  return matches ? matches.length : 0
+  const result = []
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      count = count + 1
+    }
+  }
+  return count
 }
 
-// Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
@@ -92,28 +95,29 @@ linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 /*************  ✨ Codeium Command 🌟  *************/
 export function aufgabe05(args) {
-  return /[A-Z]/.test(input) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist
+  return /[A-Z]/.test(args) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
 }
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /[+"@%/)(=?^'!£$-_,;.:äöüé&]/.test(input) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist
+  return /[+"@%/)(=?^'!£$-_,;.:äöüé&]/.test(args) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
 }
 
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
-  const input = args.toLowerCase() // Konvertiere den Text in Kleinbuchstaben
-  return input.includes("und") // Mit Variable.includes("und") kann getestet werden, ob die Zeichenkette "und" in der Variable vorkommt.
+  const input = args
+  const letterCapitalA = "A"
+  const letterSmallA = letterCapitalA.toLowerCase()
 }
 
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {
-  const input = args.replace(/e/g, "3") // ersetze alle "e" mit "3"
+  const input = args.replace(/e/g, "3") // Die Variable "replace" wird verwendet um Teile einer Zeichenkette zu ersetzen. Die Variable ("/e/g, "3") wird verwendet
   return input
 }
 
@@ -204,10 +208,30 @@ export function aufgabe19(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
-
 export function aufgabe20(args) {
   const input = args
-  return input.split(".").every(part => part === "" || part.startsWith(" "))
+  return input.split(".").every((part) => part === "" || part.startsWith(" "))
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
-Prüfen Sie ob nach jedem `.` ein Leerschlag kommt.
+
+export function aufgabe21(args) {
+  const input = args
+  return input.split("").reverse().join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  let result = ""
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "k") {
+      result += input.substring(i)
+      break
+    }
+    result += "_"
+  }
+  return result
+}
+
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)

@@ -189,9 +189,25 @@ export function aufgabe17(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
-/*************  ✨ Codeium Command 🌟  *************/
 export function aufgabe18(args) {
   const [name, alter] = args.split(" ")
   return `Sie heissen ${name} und sind ${alter} Jahre alt`
 }
 linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
+export function aufgabe19(args) {
+  const input = args
+  return input
+    .split("")
+    .map((c) => c + c)
+    .join("")
+}
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
+
+
+export function aufgabe20(args) {
+  const input = args
+  return input.split(".").every(part => part === "" || part.startsWith(" "))
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+Prüfen Sie ob nach jedem `.` ein Leerschlag kommt.

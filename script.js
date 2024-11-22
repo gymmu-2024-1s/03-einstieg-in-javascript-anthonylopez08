@@ -101,7 +101,7 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /[+"@%/)(=?^'!£$-_,;.:äöüé&]/.test(args) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
+  return /[+"@%/)(=?^'!£$-_,;.:äöüé& ]/.test(args) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
 }
 
 // Beispiel für den Aufruf
@@ -260,3 +260,36 @@ export function aufgabe22(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe23(args) {
+  const input = args
+  const firstChar = input[0]
+  return firstChar + input + firstChar
+}
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
+
+export function aufgabe24(args) {
+  const input = args
+  const firstChar = input[0]
+  const lastChar = input[input.length - 1]
+  return lastChar + input.substring(1, input.length - 1) + firstChar
+}
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+//Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden. Beschreibe was jede variable macht.
+
+export function aufgabe25(args) {
+  const input = args
+  const middleIndex = Math.floor(input.length / 2)
+  return input.substring(0, middleIndex) + input.substring(middleIndex + 1)
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
+export function aufgabe26(args) {
+  const input = args
+  if (input[0] > input[1]) {
+    return input[1] + input[0] + input.substring(2)
+  } else {
+    return input
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)

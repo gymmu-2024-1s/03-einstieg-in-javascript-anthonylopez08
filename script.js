@@ -152,8 +152,19 @@ export function aufgabe10(args) {
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
 export function aufgabe11(args) {
-  const input = args
-  return input.charCodeAt(0) // Gib den ASCII code eines einzelnen Buchstabens an.
+  const input = args // Erstelle eine Variable um den ASCII Wert zu speichern
+  let asciiCode = 0
+  // Speichere ASCII Wert vom ersten Buchstaben
+  asciiCode = input.charCodeAt(0)
+
+  if (input.length > 1) {
+    // Bedingung um zu prüfen ob mehr als ein Zeichen vor vorhanden ist.
+    return 0 // Sollte falls keine Eingabe vorhanden ist "0" rausgeben
+  } else if (input.length === 0) {
+    return 0
+  }
+  // Gibt den  ASCII-Wert zurück
+  return asciiCode
 }
 
 linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)

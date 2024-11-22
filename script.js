@@ -117,8 +117,21 @@ export function aufgabe07(args) {
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {
-  const input = args.replace(/e/g, "3") // Die Variable "replace" wird verwendet um Teile einer Zeichenkette zu ersetzen. Die Variable ("/e/g, "3") wird verwendet
-  return input
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+      // mache nichts
+      result.push(3) //Ersetzt e mit 3
+    } else {
+      result.push(currentElement)
+    }
+  }
+
+  return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
@@ -131,8 +144,10 @@ export function aufgabe09(args) {
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
 export function aufgabe10(args) {
-  const regex = /^#[0-9A-F]{6}$/i // Regex to test for a valid RGB Hex code
-  return regex.test(args)
+  const input = args
+  const result = []
+
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 

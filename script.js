@@ -30,8 +30,8 @@ export function aufgabe01(args) {
     const currentElement = input[i]
     if (currentElement === "e") {
       //do nothing
+    } else if (currentElement === "E") {
     } else {
-      currentElement === "E"
       // auch E ignorieren
       result.push(currentElement)
     }
@@ -93,7 +93,6 @@ export function aufgabe04(args) {
 // Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
-/*************  ✨ Codeium Command 🌟  *************/
 export function aufgabe05(args) {
   return /[A-Z]/.test(args) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
 }

@@ -101,8 +101,8 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /[+"@%/)(=?^'!£$-_,;.:äöüé& ]/.test(args)
-} // Alles was sich zwischen den Schrägzeichen befindet wird geprüft.  "[]" ermöglicht es eine bestimmte Zeichenart zu suchen. Beispielsweise bei den Grossbuchstaben. Anstatt dass man "ABCDEF..." schreibt, kann man diese Klammern machen und dann mit "A-Z abkürzen". Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
+  return /+"@%/)(=?^'!£$-_,;.:äöüé& /.test(args)
+} // Alles was sich zwischen den Schrägzeichen befindet wird geprüft. Hier werden keine Klammern geschrieben, weil die Funktion nicht richtig abgekürzt werden kann. Man kann die Klammern zwar schreiben aber es verädnert nichts.Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
 
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)

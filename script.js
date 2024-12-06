@@ -176,6 +176,7 @@ export function aufgabe13(args) {
   const input = args
   return input.lastIndexOf("e") // Gib die Position des letzten "e" in einem Text an.
 }
+ // Die variable "lastIndexOf" wird benutzt um nach der letzten Position eines bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem ersten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
 export function aufgabe14(args) {

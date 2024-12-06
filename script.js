@@ -211,11 +211,14 @@ export function aufgabe16(args) {
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
 
 export function aufgabe19(args) {
-  const input = args
-  return input
-    .split("")
-    .map((c) => c + c)
-    .join("")
+  const input = args // Variable verdoppelt jedes Zeichen in der Eingabe
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentLetter = input[i]
+    result.push(currentElement)
+  }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 

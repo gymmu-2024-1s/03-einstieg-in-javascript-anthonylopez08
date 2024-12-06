@@ -94,17 +94,17 @@ export function aufgabe04(args) {
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
-  return /[A-Z]/.test(args) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
-}
+  return /[A-Z]/.test(args) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist.
+} // Alles was sich zwischen den Schrägzeichen befindet wird geprüft.  "[]" ermöglicht es eine bestimmte Zeichenart zu suchen. Beispielsweise bei den Grossbuchstaben. Anstatt dass man "ABCDEF..." schreibt, kann man diese Klammern machen und dann mit "A-Z abkürzen". Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
 
-// Beispiel für den Aufruf
+
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /[+"@%/)(=?^'!£$-_,;.:äöüé& ]/.test(args) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Ermöglicht es nach einem bestimmten Zeichen oder einer Zeichenart zu suchen.
-}
+  return /[+"@%/)(=?^'!£$-_,;.:äöüé& ]/.test(args)
+} // Alles was sich zwischen den Schrägzeichen befindet wird geprüft.  "[]" ermöglicht es eine bestimmte Zeichenart zu suchen. Beispielsweise bei den Grossbuchstaben. Anstatt dass man "ABCDEF..." schreibt, kann man diese Klammern machen und dann mit "A-Z abkürzen". Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
 
-// Beispiel für den Aufruf
+
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {

@@ -169,7 +169,7 @@ linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 export function aufgabe12(args) {
   const input = args
   return input.indexOf("e") // Gib die Position des ersten "e" in einem Text an.
-} // Die variable "indexOf" wird benutzt um nach einem bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem ersten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort.
+} // Die variable "indexOf" wird benutzt um nach einem bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem ersten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
 export function aufgabe13(args) {
@@ -209,18 +209,6 @@ export function aufgabe16(args) {
   return [input.substring(0, index), input.substring(index + 1)]
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
-
-export function aufgabe17(args) {
-  const input = args
-  return input.split(",")
-}
-linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
-
-export function aufgabe18(args) {
-  const [name, alter] = args.split(" ")
-  return `Sie heissen ${name} und sind ${alter} Jahre alt`
-}
-linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
 
 export function aufgabe19(args) {
   const input = args

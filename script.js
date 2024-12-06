@@ -169,7 +169,7 @@ linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 export function aufgabe12(args) {
   const input = args
   return input.indexOf("e") // Gib die Position des ersten "e" in einem Text an.
-}
+} // Die variable "indexOf" wird benutzt um nach einem bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem ersten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort.
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
 export function aufgabe13(args) {

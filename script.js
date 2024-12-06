@@ -109,10 +109,9 @@ linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
   const input = args
-  const letterCapitalA = "A"
-  const letterSmallA = letterCapitalA.toLowerCase()
+  return input.includes("und")
 }
-
+// Beispiel für den Aufruf
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {

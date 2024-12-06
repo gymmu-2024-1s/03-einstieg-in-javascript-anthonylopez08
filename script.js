@@ -95,7 +95,7 @@ linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
   return /[A-Z]/.test(args) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist.
-} // Alles was sich zwischen den Schrägzeichen befindet wird geprüft.  "[]" ermöglicht es eine bestimmte Zeichenart zu suchen. Beispielsweise bei den Grossbuchstaben. Anstatt dass man "ABCDEF..." schreibt, kann man diese Klammern machen und dann mit "A-Z abkürzen". Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
+} // Alles was sich zwischen den Schrägzeichen befindet wird geprüft.  "[]" ermöglicht es eine bestimmte Zeichenart zu suchen. Beispielsweise bei den Grossbuchstaben. Anstatt dass man "ABCDEF..." schreibt, kann man diese Klammern machen und dann mit "A-Z abkürzen". Die Variable "test", überprüft ob es ein Zeichen zwischen A-Z gibt. Dann gibt die gesamte Zeile "true"oder "false" zurück. "True" wenn es ein Grossbuchstaben gibt und "false" wenn es keine Grossbuchstaben gibt.
 
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
@@ -136,7 +136,7 @@ linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
 export function aufgabe09(args) {
   const input = args
   return input.length === 6 // Testet, ob die Eingabe genau 6 Zeichen lang ist
-}
+} // Die Variable "input.length" gibt die Länge der Input an. Danach testet die Variable "=== 6" ob sie 6 Zeichen lang ist. Wenn dies der Fall ist, wird "true" zurückgegeben. Falls nicht, wird "false" zurückgegeben.
 
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
@@ -190,7 +190,7 @@ export function aufgabe14(args) {
       }
     }
   }
-  return -1 // Return -1 if there is no third "e"
+  return -1 //Gib -1 zurück wenn es kein "e" gibt.
 }
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 

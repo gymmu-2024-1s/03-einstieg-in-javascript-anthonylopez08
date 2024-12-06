@@ -101,7 +101,7 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /[+"@%/)(=?^'!£$-_,;.:äöüé& ]/.test(args) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Erlaubt es nach einem bestimmten Zeichen oder einem Bereich von  Zeichen zu suchen.
+  return /[+"@%/)(=?^'!£$-_,;.:äöüé& ]/.test(args) // Überprüft, ob mindestens ein Sonderzeichen vorhanden ist. Alles was sich zwischen den Klammern befindet, wird geprüft. [] Ermöglicht es nach einem bestimmten Zeichen oder einer Zeichenart zu suchen.
 }
 
 // Beispiel für den Aufruf
@@ -299,3 +299,13 @@ export function aufgabe27(args) {
   return !isNaN(input)
 } // Das "isNaN" ist eine Variable, die überprüft ob "Input" eine Zahl ist. Das bedeutet wenn "Input" eine Zahl ist, wird mit "true" geantwortet. Sie steht für "is Not a Number". Wenn "Input" keine Zahl ist, wird mit "false" geantwortet. Dazu ist das Ausrufezeichen dafür da, um die Antwort wie umzukehren. Das bedeutet, wenn kein Ausrufezeichen da wäre, würde es bei einer Zahl mit "false" antworten. Anders gesagt, ist es ein Negationszeichen, welches den Wahrweitswert einer Bedingung umkehrt.
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe28(args) {
+  const [num1, num2] = args.split(" ")
+  if (!isNaN(num1) && !isNaN(num2)) {
+    return Number(num1) + Number(num2)
+  } else {
+    return "Fehlermeldung"
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)

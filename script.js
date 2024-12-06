@@ -110,8 +110,7 @@ linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 export function aufgabe07(args) {
   const input = args
   return input.includes("und")
-}
-// Beispiel für den Aufruf
+} // Die Variable "input" ist die die Eingabe. Die Variable "includes" teste ob es im "Input" das Wort "und" gibt. Bei der Variable "include" wird der "Input" in diese Klammer geschrieben. Wenn es der Fall ist, dass es hier und im Input hat dann gibt die ganze Zeile (return input.includes("und") "true" zurück. Wenn dies nicht der Fall ist, wird "false" zurückgegeben.
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
 export function aufgabe08(args) {

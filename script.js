@@ -194,9 +194,15 @@ export function aufgabe14(args) {
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
 export function aufgabe15(args) {
-  const input = args
-  const firstSpace = input.indexOf(" ")
-  return firstSpace === -1 ? input : input.substring(0, firstSpace)
+const input = args
+const result = []
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  if (currentElement === " ") {
+    return result.join("")
+  }
+  result.push(currentElement)
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 

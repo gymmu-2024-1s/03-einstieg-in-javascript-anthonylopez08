@@ -257,6 +257,10 @@ export function aufgabe17(args) {
       currentList.push(currentElement)
     }
   }
+
+  // Wir schreiben alles was wir bis zum Ende gelesen haben, in die Liste
+  totalList.push(currentList.join(""))
+
   return totalList
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)

@@ -241,6 +241,25 @@ export function aufgabe16(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
 
+export function aufgabe17(args) {
+  const input = args
+  const totalList = []
+  const currentList = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn wir auf ein Leerzeichen treffen, dann schreiben alles was wir bis jetzt haben in die totalList.
+
+    if (currentElement === "_") {
+      totalList.push(currentList.join(""))
+      currentList.length = 0
+    } else {
+      currentList.push(currentElement)
+    }
+  }
+  return totalList
+}
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 export function aufgabe19(args) {
   const input = args // Variable verdoppelt jedes Zeichen in der Eingabe
   const result = []

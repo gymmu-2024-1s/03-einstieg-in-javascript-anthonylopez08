@@ -250,7 +250,7 @@ export function aufgabe17(args) {
     const currentElement = input[i]
     // Wenn wir auf ein Leerzeichen treffen, dann schreiben alles was wir bis jetzt haben in die totalList.
 
-    if (currentElement === "_") {
+    if (currentElement === " ") {
       totalList.push(currentList.join(""))
       currentList.length = 0
     } else {
@@ -264,6 +264,7 @@ export function aufgabe17(args) {
   return totalList
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
 export function aufgabe19(args) {
   const input = args // Variable verdoppelt jedes Zeichen in der Eingabe
   const result = []

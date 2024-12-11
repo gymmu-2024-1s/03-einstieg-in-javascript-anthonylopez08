@@ -106,14 +106,15 @@ export function aufgabe04(args) {
     }
   }
   // Jetzt könne wir die Leerzeichen zählen.
-let count = 0
-for (let i = 0; i < result2.length; i++) {
-  if currentElement === " " {
-    count++
+  let count = 0
+  for (let i = 0; i < result2.length; i++) {
+    const currentElement = result2[i]
+    if (result2[i] === " ") {
+      count++
+    }
   }
-}
-// Da es ein Wort mehr wie Leerzeichen gibt, geben wie Leerzeichen+1 zurück.
-return count + 1
+  // Da es ein Wort mehr wie Leerzeichen gibt, geben wie Leerzeichen+1 zurück.
+  return count + 1
 }
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 

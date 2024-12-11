@@ -1,4 +1,4 @@
-import { linkupExerciseHandler } from "./utils"
+import { $, linkupExerciseHandler } from "./utils"
 
 /**
  * Wir erstellen hier eine Funktion für die Aufgabe 1. Funktionen sind praktisch
@@ -80,30 +80,52 @@ linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
   const input = args // Erstelle eine Zählervariable in der Eingabe
-  let count = 0
-  for (let i = 0; i < input.length; i++) {}
-  const currentElement = input[i]
-  if (currentElement === " ") {
-    count = count + 1
+  const result = []
+  // Wir filtern die Eingabe, sodass nur noch Buchstaben und Leerzeichen übrig sind.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (ascii >= 65 && ascii <= 90) {
+      //Grossbuchstabe
+      result.push(currentElement)
+    } else if (ascii === 32) {
+      //Leerzeichen
+      result.push(currentElement)
+    }
   }
-  // Gib count +1 zurück, weil es ein Wort mehr gibt wie Leerzeichen
-  return count + 1
-}
+  // Jetzt könnten wir noch mehrere Leerzeichen am Stück haben, die müssen wir noch filtern.
+  const result2 = []
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = result[i]
+    const nextElement = result[i + 1]
 
-// Beispiel für den Aufruf
+    if (currentElement === " " && nextElement === " ") {
+      // Hier sind zwei Leerzeichen hintereinander, wir ignorieren das Erste.
+    } else {
+      result2.push(currentElement)
+    }
+  }
+  // Jetzt könne wir die Leerzeichen zählen.
+let count = 0
+for (let i = 0; i < result2.length; i++) {
+  if currentElement === " " {
+    count++
+  }
+}
+// Da es ein Wort mehr wie Leerzeichen gibt, geben wie Leerzeichen+1 zurück.
+return count + 1
+}
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
 
 export function aufgabe05(args) {
   return /[A-Z]/.test(args) // Überprüft, ob mindestens ein Grossbuchstabe vorhanden ist.
 } // Alles was sich zwischen den Schrägzeichen befindet wird geprüft.  "[]" ermöglicht es eine bestimmte Zeichenart zu suchen. Beispielsweise bei den Grossbuchstaben. Anstatt dass man "ABCDEF..." schreibt, kann man diese Klammern machen und dann mit "A-Z abkürzen". Die Variable "test", überprüft ob es ein Zeichen zwischen A-Z gibt. Dann gibt die gesamte Zeile "true"oder "false" zurück. "True" wenn es ein Grossbuchstaben gibt und "false" wenn es keine Grossbuchstaben gibt.
 
-
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /+"@%/)(=?^'!£$-_,;.:äöüé& /.test(args)
+  return /"!?&%().:,;-_+=/.test(args)
 } // Alles was sich zwischen den Schrägzeichen befindet wird geprüft. Hier werden keine Klammern geschrieben, weil die Funktion nicht richtig abgekürzt werden kann. Man kann die Klammern zwar schreiben aber es verädnert nichts.Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
-
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
@@ -176,7 +198,7 @@ export function aufgabe13(args) {
   const input = args
   return input.lastIndexOf("e") // Gib die Position des letzten "e" in einem Text an.
 }
- // Die variable "lastIndexOf" wird benutzt um nach der letzten Position eines bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem letzten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
+// Die variable "lastIndexOf" wird benutzt um nach der letzten Position eines bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem letzten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
 export function aufgabe14(args) {
@@ -195,15 +217,16 @@ export function aufgabe14(args) {
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
 export function aufgabe15(args) {
-const input = args
-const result = []
+  const input = args
+  const result = []
 
-for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
-  if (currentElement === " ") {
-    return result.join("")
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      return result.join("")
+    }
+    result.push(currentElement)
   }
-  result.push(currentElement)
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 

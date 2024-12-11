@@ -250,7 +250,7 @@ export function aufgabe17(args) {
     const currentElement = input[i]
     // Wenn wir auf ein Leerzeichen treffen, dann schreiben alles was wir bis jetzt haben in die totalList.
 
-    if (currentElement === " ") {
+    if (currentElement === ",") {
       totalList.push(currentList.join(""))
       currentList.length = 0
     } else {
@@ -353,3 +353,5 @@ export function aufgabe28(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
+
+export function aufgabe29(args) {

@@ -69,12 +69,12 @@ export function aufgabe03(args) {
   let count = 0
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === "e") {
+    if (currentElement === "e" || currentElement === "E") {
       count = count + 1
     }
-
+  }
+  return count
 }
-
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
 export function aufgabe04(args) {
@@ -164,9 +164,8 @@ linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
 export function aufgabe10(args) {
   const input = args
-  const result = []
-
-  return result.join("")
+  if (input.length === 6) return true
+  else return false
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
@@ -178,9 +177,9 @@ export function aufgabe11(args) {
 
   if (input.length > 1) {
     // Bedingung um zu prüfen ob mehr als ein Zeichen vor vorhanden ist.
-    return 0 // Sollte falls keine Eingabe vorhanden ist "0" rausgeben
+    return null // Sollte falls keine Eingabe vorhanden ist "0" rausgeben
   } else if (input.length === 0) {
-    return 0
+    return null
   }
   // Gibt den  ASCII-Wert zurück
   return asciiCode

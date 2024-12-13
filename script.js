@@ -72,8 +72,7 @@ export function aufgabe03(args) {
     if (currentElement === "e") {
       count = count + 1
     }
-  }
-  return count
+
 }
 
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
@@ -265,13 +264,36 @@ export function aufgabe17(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
+export function aufgabe18(args) {
+  const input = args
+
+  //Wir können die Aufgabe 17 verwenden um eine Liste zu bekommen
+  const nameAndAge = aufgabe17(input)
+
+  //Wir generieren unsere Ausgabeliste
+  const result = []
+
+  result.push("Sie heissen")
+
+  // Wir setzen die Liste dann so zusammen, dass der Name und das Alter an der richtgen Stelle eingefügt wird
+  result.push(nameAndAge[0])
+  result.push("und sind")
+  result.push(nameAndAge[1])
+  result.push(" Jahre alt")
+
+  //Wie immer geben wir das Resultat als Text zurück
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
 export function aufgabe19(args) {
   const input = args // Variable verdoppelt jedes Zeichen in der Eingabe
   const result = []
 
   for (let i = 0; i < input.length; i++) {
-    const currentLetter = input[i]
+    const currentElement = input[i]
     result.push(currentElement)
+    result.push(currentElement) //Hängt Element am Ende der Liste an
   }
   return result.join("")
 }
@@ -354,4 +376,4 @@ export function aufgabe28(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
 
-export function aufgabe29(args) {
+export function aufgabe29(args) {}

@@ -1,3 +1,4 @@
+import { X } from "vitest/dist/chunks/reporters.C4ZHgdxQ.js"
 import { $, linkupExerciseHandler } from "./utils"
 
 /**
@@ -164,8 +165,6 @@ linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
 export function aufgabe10(args) {
   const input = args
-  if (input.length === 6) return true
-  else return false
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 
@@ -366,7 +365,8 @@ export function aufgabe27(args) {
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
 
 export function aufgabe28(args) {
-  const [num1, num2] = args.split(" ")
+  const input = args
+  const [num1, num2] = input
   if (!isNaN(num1) && !isNaN(num2)) {
     return Number(num1) + Number(num2)
   } else {
@@ -375,4 +375,8 @@ export function aufgabe28(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
 
-export function aufgabe29(args) {}
+export function aufgabe29(args) {
+  const input = args
+  return input.length === 3 // Testet, ob die Eingabe genau 3 Zeichen lang ist
+}
+linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)

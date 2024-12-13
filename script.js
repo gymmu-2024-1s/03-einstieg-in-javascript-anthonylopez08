@@ -299,7 +299,20 @@ linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
 export function aufgabe20(args) {
   const input = args
-  return input.split(".").every((part) => part === "" || part.startsWith(" "))
+  let hasSpace = true
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      const nextElement = input[i + 1]
+      if nextElement === (" ") {
+
+      hasSpace = true
+    } else {
+      hasSpace = false
+    }
+  }
+}
+  return hasSpace
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 

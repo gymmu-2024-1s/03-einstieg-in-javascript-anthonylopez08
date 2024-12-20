@@ -361,10 +361,11 @@ linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
 
 export function aufgabe23(args) {
   const input = args
-  const firstChar = input[0]
-  return firstChar + input + firstChar
+  const firstChar = input[0] // Speichert das erste Zeichen des Input.
+  return firstChar + input + firstChar // Hängt das erste Zeichen am Anfang und am Ende des Input an.
 }
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
+// Firstchar speichert hier das erste Zeichen des Inputs. Danach setzt es dann mit dem Befehl "return firstChar + input + firstChar" das erste Zeichen am Anfang und am Ende des Inputs an. Das bedeutet das firstchar ist zum Beispiel "e". Also gibt es das Input zurück, aber hängt noch das "e" am Anfang und am Schluss an.
 
 export function aufgabe24(args) {
   //Das erste und das letzte Zeichen sollen vertauscht werden
@@ -388,10 +389,9 @@ linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 export function aufgabe25(args) {
   const input = args
   const middleIndex = Math.floor(input.length / 2)
-  return input.substring(0, middleIndex) + input.substring(middleIndex + 1)
+  return input.substring(0, middleIndex) + input.substring(middleIndex + 1) //Gibt das Zeichen vor und nachdem entfernten zeichen wieder zurück
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
-//Neu schreiben
 
 export function aufgabe26(args) {
   const input = args

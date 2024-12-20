@@ -163,9 +163,16 @@ export function aufgabe09(args) {
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
 export function aufgabe10(args) {
-  const input = args
+  // Überprüfen, ob die Eingabe ein gültiger Hexcode ist
+  if (/^#[0-9A-Fa-f]{6}$/.test(input)) {
+    return "Sollte ein korrekter Code sein" // Wenn der Code richtig ist
+  }
+
+  // Wenn der Code falsch ist
+  return "Sollte kein korrekter RGB Hexcode sein"
 }
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
+// Alles was sich zwischen den Schrägzeichen befindet wird geprüft. Die Variable "test", überprüft es dann. Die eckigen  Klammern werden verwendet um einen nach einer Zeichenart zu suchen. Das Hashtag befindet sich auch in der Klammer, weil das vor jedem Hexcode steht. Mit der  6 in der Klammer wird auch überprüft, ob der Hexcode 6 Zeichen lang ist nachdem Hashtag.
 
 export function aufgabe11(args) {
   const input = args // Erstelle eine Variable um den ASCII Wert zu speichern

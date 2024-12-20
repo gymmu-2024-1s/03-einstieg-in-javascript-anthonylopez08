@@ -237,7 +237,7 @@ export function aufgabe16(args) {
   return [input.substring(0, index), input.substring(index + 1)]
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
-
+// Neu schreiben
 export function aufgabe17(args) {
   const input = args
   const totalList = []
@@ -309,7 +309,7 @@ export function aufgabe21(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
-
+// Neu schreiben
 export function aufgabe22(args) {
   const input = args
   let result = ""
@@ -322,7 +322,7 @@ export function aufgabe22(args) {
   }
   return result
 }
-
+// Neu schreiben
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
 
 export function aufgabe23(args) {
@@ -339,7 +339,7 @@ export function aufgabe24(args) {
   return lastChar + input.substring(1, input.length - 1) + firstChar
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
-//Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden. Beschreibe was jede variable macht.
+//Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden. Beschreibe was jede variable macht. Neu schreiben
 
 export function aufgabe25(args) {
   const input = args
@@ -347,6 +347,7 @@ export function aufgabe25(args) {
   return input.substring(0, middleIndex) + input.substring(middleIndex + 1)
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+//Neu schreiben
 
 export function aufgabe26(args) {
   const input = args
@@ -357,6 +358,7 @@ export function aufgabe26(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
+// Neu schreiben
 
 export function aufgabe27(args) {
   const input = args

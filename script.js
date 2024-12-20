@@ -331,18 +331,19 @@ linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 // Neu schreiben
 export function aufgabe22(args) {
   const input = args
-  let result = ""
+  let result = "" // Hier wird eine leere Zeichenkette erstellt, in der das Ergebnis später gespeichert werden kann.
   for (let i = 0; i < input.length; i++) {
     if (input[i] === "k") {
-      result += input.substring(i)
-      break
+      // Diese Zeile überprüft, ob ein es ein "k" im Input gibt.
+      result += input.substring(i) //Wenn das Zeichen „k“ gefunden wird, fügt diese Zeile den restlichen Text ab diesem „k“ mit dieser Zeile hinzu.
+      break // Bricht den Vorgang ab, nachdem das "k" gefunden wurde und der restliche Text hinzugefügt wurde.
     }
-    result += "_"
+    result += "_" // Wenn kein "k" vorhanden ist wird bis zum Schluss des Input ein Unterstrich hinzugefügt.
   }
-  return result
+  return result // Gibt das Schlussergebnis zurück.
 }
-// Neu schreiben
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+// Das "Substring" schneidet den Text ab der gewünschten Stelle heraus und fügt ihn am Ende wieder ein.
 
 export function aufgabe23(args) {
   const input = args

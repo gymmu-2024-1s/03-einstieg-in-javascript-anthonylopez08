@@ -461,3 +461,23 @@ export function Selectionsort(args) {
 }
 
 linkupExerciseHandler("[data-click=Selectionsort]", Selectionsort)
+
+export function Bubblesort(args) {
+  const text = args
+  const list = text.split("") // Anhand dieser dieser Zeile wandeln wir den Text in eine Liste um, das wird benötigt wenn wir die Elemente vertauschen wollen.
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      // Wenn die Reihenfolge nicht stimmt , müssen die Elemente getauscht werden.
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1 // Beginne wieder am  Anfang wenn etwas vertauscht wurde.
+    }
+  }
+  const result = list.join("")
+
+  return result
+}
+linkupExerciseHandler("[data-click=Bubblesort]", Bubblesort)

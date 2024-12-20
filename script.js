@@ -516,7 +516,7 @@ export function aufgabe31(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
-// Überprüft ob ein Wort ein Palindrom ist. Wenn nicht im Input steht, wird mit true geantwortet, weil nix umgekehrt ja auch nix ist.
+// Überprüft ob ein Wort ein Palindrom ist. Wenn nicht im Input steht, wird mit true geantwortet, weil nix umgekehrt ja auch nix ist. Das läuft so ab, das eingegebene Wort (Input) wird zuerst in funktion 21 eingesetzt, um das Umgekehrte herauszukriegen, dafür wird auch eine Variable erstellt (umgekehrtesWort), in der das Umgekehrte des Inputs gespeichert wird. Danach überprüft die Bedingung ob der Input mit der Variable umgekehrtes Wort übereinstimmt und gibt true oder false zurück.
 
 export function Selectionsort(args) {
   const input = args.split("")

@@ -1,5 +1,4 @@
-import { X } from "vitest/dist/chunks/reporters.C4ZHgdxQ.js"
-import { $, linkupExerciseHandler } from "./utils"
+import { linkupExerciseHandler } from "./utils"
 
 /**
  * Wir erstellen hier eine Funktion für die Aufgabe 1. Funktionen sind praktisch
@@ -230,14 +229,20 @@ linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
 export function aufgabe16(args) {
   const input = args
-  const index = input.indexOf("$")
-  if (index === -1) {
-    return [input, ""]
+  const result = []
+  // Die Eingabe wird bis zum Zeichen '$' gelesen und als ersten Teil einer Liste zurückgegeben, und den Rest als den zweiten Teil.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      break
+    }
+    result.push(currentElement)
   }
-  return [input.substring(0, index), input.substring(index + 1)]
+  return result.join("")
 }
+
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
-// Neu schreiben
+
 export function aufgabe17(args) {
   const input = args
   const totalList = []
@@ -245,7 +250,7 @@ export function aufgabe17(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    // Wenn wir auf ein Leerzeichen treffen, dann schreiben alles was wir bis jetzt haben in die totalList.
+    // Wenn wir auf ein Leerzeichen treffen, dann schreiben alles bis jetzt Vorhandene in die totalList.
 
     if (currentElement === ",") {
       totalList.push(currentList.join(""))
@@ -255,7 +260,7 @@ export function aufgabe17(args) {
     }
   }
 
-  // Wir schreiben alles was wir bis zum Ende gelesen haben, in die Liste
+  // Alles was bis zum Ende gelesen wurde, schreiben wir in die Liste
   totalList.push(currentList.join(""))
 
   return totalList
@@ -299,7 +304,7 @@ linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
 export function aufgabe20(args) {
   const input = args
-
+}
 
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
@@ -382,3 +387,28 @@ export function aufgabe29(args) {
   return input.length === 3 // Testet, ob die Eingabe genau 3 Zeichen lang ist
 }
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
+
+export function aufgabe30(args) {
+  const input = args
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === "a") {
+      count++
+      if (count === 3) {
+        return i
+      }
+    }
+  }
+  return -1 //Gib -1 zurück wenn es kein "a" gibt.
+}
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
+
+export function aufgabe31(args) {
+  const input = args // Variable verdoppelt jedes Zeichen in der Eingabe
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    result.push(input[i] + input[i])
+  } //Hängt Element am Ende der Liste an
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)

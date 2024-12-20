@@ -406,14 +406,16 @@ linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
 
 export function aufgabe28(args) {
   const input = args
-  const [num1, num2] = input
+  const [num1, num2] = input // Hier werden die Variablen num1 und num2 gespeichert.
   if (!isNaN(num1) && !isNaN(num2)) {
-    return Number(num1) + Number(num2)
+    // Hier wird überprüft, ob "num1" und "num2" Zahlen sind.
+    return Number(num1) + Number(num2) // Wenn "num1" und "num2" Zahlen sind werden sie hier zusammengerechnet.
   } else {
-    return "Fehlermeldung"
+    return "Fehlermeldung" // Wenn irgendetwas schief geht, wie zum Beispiel dass num1 und num2 keine Zahlen sind, wird "Fehlermeldung" zurückgegeben
   }
 }
 linkupExerciseHandler("[data-click=aufgabe28]", aufgabe28)
+// Bei dieser Aufgabe werden die Eingaben von einem Leerzeichen getrennt. Diese werden dann in die Variablen "num1" und "num2" gespeichert. Anhand dieser zwei Variablen wird überprüft, ob diese auch wirklich Zahlen sind und wenn ja, werden diese zusammengerechnet. Wenn dies nicht der Fall ist, wird "Fehlermeldung" zurückgegeben.
 
 export function aufgabe29(args) {
   const input = args

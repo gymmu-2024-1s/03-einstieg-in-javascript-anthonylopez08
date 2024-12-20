@@ -517,3 +517,28 @@ export function Bubblesort(args) {
   return result
 }
 linkupExerciseHandler("[data-click=Bubblesort]", Bubblesort)
+
+export function Radixsort(args) {
+  const input = args.split("") // Wird in Array umgewandelt
+  let max = math.max(...input.map(Number)) // Den grössten Wert finden
+  let place = 1
+  while (max / place >= 1) {
+    // Sortiere die Zeichen ab der aktuellen Position
+    for (let i = 0; i < input.length - 1; i++) {
+      for (let j = i + 1; j < input.length; j++) {
+        let digitA = Math.floor(input[i] / place) % 10 // entferne das Zeichen vom input[i]
+        let digitB = Math.floor(input[j] / place) % 10 // entferne das Zeichen vom input[j]
+
+        if (digitA > digitB) {
+          // Wenn die Position des Zeichens im Input nicht stimmt, dann vertausche die Position der Zeichen
+          let tmp = input[i]
+          input[i] = input[j]
+          input[j] = tmp
+        }
+      }
+    }
+    place *= 10 // Schreite zum nächsten Zeichen vor
+  }
+  return input.join("") // Wandelt es wieder in eine Zeichenkette um
+}
+linkupExerciseHandler("[data-click=Radixsort]", Radixsort)

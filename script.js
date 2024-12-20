@@ -416,3 +416,29 @@ export function aufgabe30(args) {
   return -1 //Gib -1 zurück wenn es kein "a" gibt.
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
+
+export function Selectionsort(args) {
+  const input = args.split("")
+  const result = []
+  let n = input.length
+  for (let i = 0; i < n - 1; i++) {
+    // Wenn der Fall ist das die momentane Position stimmt, soll das kleinste Element nicht verschoben werden
+    let min_idx = i
+
+    // Durchsucht den Teil der nicht sortiert wurde, um das kleinste Zeichen zu finden
+    for (let j = i + 1; j < n; j++) {
+      if (input[j] < input[min_idx]) {
+        // Wenn das Zeichen kleiner ist, wird die Position des Zeichens verändert
+        min_idx = j
+      }
+    }
+
+    // Bewegt das kleinste Zeichen zur richtigen Position
+    let temp = input[i]
+    input[i] = input[min_idx]
+    input[min_idx] = temp
+  }
+  return input
+}
+
+linkupExerciseHandler("[data-click=Selectionsort]", Selectionsort)

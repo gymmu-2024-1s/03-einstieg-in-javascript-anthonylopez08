@@ -331,11 +331,18 @@ linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
 export function aufgabe21(args) {
   const input = args
-  return input.split("").reverse().join("")
+  const result = []
+  //Kehrt die Eingabe um
+  for (let i = input.length - 1; i >= 0; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
-// Neu schreiben
+
 export function aufgabe22(args) {
   const input = args
   let result = "" // Hier wird eine leere Zeichenkette erstellt, in der das Ergebnis später gespeichert werden kann.

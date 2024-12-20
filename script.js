@@ -402,13 +402,3 @@ export function aufgabe30(args) {
   return -1 //Gib -1 zurück wenn es kein "a" gibt.
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
-
-export function aufgabe31(args) {
-  const input = args // Variable verdoppelt jedes Zeichen in der Eingabe
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    result.push(input[i] + input[i])
-  } //Hängt Element am Ende der Liste an
-  return result.join("")
-}
-linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)

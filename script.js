@@ -352,13 +352,23 @@ export function aufgabe23(args) {
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 
 export function aufgabe24(args) {
+  //Vertausche das erste und das letzte Zeichen
   const input = args
-  const firstChar = input[0]
-  const lastChar = input[input.length - 1]
-  return lastChar + input.substring(1, input.length - 1) + firstChar
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[input.length - 1])
+    } else if (i === input.length - 1) {
+      result.push(input[0])
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
-//Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden. Beschreibe was jede variable macht. Neu schreiben
 
 export function aufgabe25(args) {
   const input = args
@@ -425,17 +435,6 @@ export function aufgabe30(args) {
   return -1 //Gib -1 zurück wenn es kein "a" gibt.
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
-
-export function aufgabe31(args) {
-  const input = args
-  for (let i = 0; i < input.length; i++) {
-  if (input % 2 === 0) { return gerade Zahl
-}
-else if (input % 2 === 1) { return ungerade Zahl
-  }
-}
-}
-linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
 
 export function Selectionsort(args) {
   const input = args.split("")

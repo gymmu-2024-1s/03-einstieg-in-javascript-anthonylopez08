@@ -426,6 +426,17 @@ export function aufgabe30(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
 
+export function aufgabe31(args) {
+  const input = args
+  for (let i = 0; i < input.length; i++) {
+  if (input % 2 === 0) { return gerade Zahl
+}
+else if (input % 2 === 1) { return ungerade Zahl
+  }
+}
+}
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
+
 export function Selectionsort(args) {
   const input = args.split("")
   const result = []

@@ -352,7 +352,7 @@ export function aufgabe23(args) {
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 
 export function aufgabe24(args) {
-  //Vertausche das erste und das letzte Zeichen
+  //Das erste und das letzte Zeichen sollen vertauscht werden
   const input = args
   const result = []
 

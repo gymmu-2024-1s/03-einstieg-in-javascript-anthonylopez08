@@ -163,16 +163,38 @@ export function aufgabe09(args) {
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
 export function aufgabe10(args) {
-  // Überprüfen, ob die Eingabe ein gültiger Hexcode ist
-  if (/^#[0-9A-Fa-f]{6}$/.test(input)) {
-    return "Sollte ein korrekter Code sein" // Wenn der Code richtig ist
+  const input = args
+  // Überprüft, ob "#" das erste Zeichen ist
+  if (input[0] !== "#") {
+    return "sollte kein korrekter RGB Hexcode sein" // Gibt das zurück, wenn das "#" nicht das erste Zeichen ist
   }
 
-  // Wenn der Code falsch ist
-  return "Sollte kein korrekter RGB Hexcode sein"
+  // Überprüft, ob die Eingabe 7 Zeichen lang ist
+  if (input.length !== 7) {
+    return false
+  }
+
+  // Überprüft, ob die 6 Zeichen  Hexadezimalzeichen sind
+  for (let i = 1; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    // Überprüft, ob das Zeichen ein Hexadezimalzeichen ist
+    if (
+      !(
+        (ascii >= 48 && ascii <= 57) || // 0-9
+        (ascii >= 65 && ascii <= 70) || // A-F
+        (ascii >= 97 && ascii <= 102)
+      ) // a-f
+    ) {
+      return "sollte kein korrekter RGB Hexcode sein" // Wenn es falsch ist gibt es das zurück
+    }
+  }
+
+  return "sollte ein korrekter RGB Hexcode sein" // Gibt das zurück wenn es richtig ist.
 }
+
 linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
-// Alles was sich zwischen den Schrägzeichen befindet wird geprüft. Die Variable "test", überprüft es dann. Die eckigen  Klammern werden verwendet um einen nach einer Zeichenart zu suchen. Das Hashtag befindet sich auch in der Klammer, weil das vor jedem Hexcode steht. Mit der  6 in der Klammer wird auch überprüft, ob der Hexcode 6 Zeichen lang ist nachdem Hashtag.
 
 export function aufgabe11(args) {
   const input = args // Erstelle eine Variable um den ASCII Wert zu speichern
@@ -195,14 +217,14 @@ linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
 export function aufgabe12(args) {
   const input = args
   return input.indexOf("e") // Gib die Position des ersten "e" in einem Text an.
-} // Die variable "indexOf" wird benutzt um nach einem bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem ersten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
+} // Die variable "indexOf" wird benutzt um nach einem bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem ersten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Also muss man immer die zurückbekommene Position um 1 erhöhen. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
 
 export function aufgabe13(args) {
   const input = args
   return input.lastIndexOf("e") // Gib die Position des letzten "e" in einem Text an.
 }
-// Die variable "lastIndexOf" wird benutzt um nach der letzten Position eines bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem letzten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
+// Die variable "lastIndexOf" wird benutzt um nach der letzten Position eines bestimmten Zeichen zu suchen. Das bedeutet das die gesamte Zeile, nach dem letzten Vorkommen des gewünschten Zeichens. Die Positionsmessung beginnt bei 0. Das bedeutet, dass wenn das "e" an zweiter Stelle steht, wird 1 zurückgegeben als Antwort. Deswegen muss man die zurückbekommene Position um 1 erhöhen. Falls das gewünschte Zeichen nicht vorhanden ist, wird mit -1 geantwortet.
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
 export function aufgabe14(args) {

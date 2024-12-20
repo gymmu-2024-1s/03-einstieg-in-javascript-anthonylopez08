@@ -370,14 +370,23 @@ linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
 export function aufgabe26(args) {
   const input = args
-  if (input[0] > input[1]) {
-    return input[1] + input[0] + input.substring(2)
-  } else {
-    return input
+  const result = []
+  // Das erste und zweite Zeichen sollen verglichen und vertauscht werden
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[1])
+    } else if (i === 1) {
+      result.push(input[0])
+    } else {
+      //Mache nichts
+      result.push(currentElement)
+    }
   }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
-// Neu schreiben
 
 export function aufgabe27(args) {
   const input = args

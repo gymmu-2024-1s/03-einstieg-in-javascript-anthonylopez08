@@ -472,6 +472,22 @@ export function aufgabe30(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
 
+export function aufgabe31(args) {
+  const input = args
+
+  // Kehrt die Eingabe um
+  const umgekehrtesWort = aufgabe21(input)
+
+  // Vergleicht das ursprüngliche Wort mit dem umgekehrten Wort
+  if (input === umgekehrtesWort) {
+    return true // Es handelt sich um ein Palindrom
+  } else {
+    return false // Es handelt sich nicht um ein Palindrom
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
+// Überprüft ob ein Wort ein Palindrom ist
+
 export function Selectionsort(args) {
   const input = args.split("")
   const result = []

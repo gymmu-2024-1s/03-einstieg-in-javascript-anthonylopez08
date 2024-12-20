@@ -304,8 +304,22 @@ linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
 
 export function aufgabe20(args) {
   const input = args
+  const result = []
+  let allGood = true
+  //prüfe ob nach jeden "." ein Leerschlag kommt
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      //prüft ob das nächste Zeichen ein Leerzeichen ist
+      if (input[i + 1] === " ") {
+        //Mache nichts
+      } else {
+        allGood = false
+      }
+    }
+  }
+  return allGood
 }
-
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
 export function aufgabe21(args) {

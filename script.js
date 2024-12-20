@@ -124,7 +124,7 @@ export function aufgabe05(args) {
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
 export function aufgabe06(args) {
-  return /["!?&%().:,;-_=]/.test(args)
+  return /["!?&%().:,;-_= ]/.test(args)
 } // Alles was sich zwischen den Schrägzeichen befindet wird geprüft. Die Variable "test", überprüft und gibt dann "true" oder "false" zurück.
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)

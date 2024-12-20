@@ -84,8 +84,12 @@ export function aufgabe04(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const ascii = currentElement.charCodeAt(0)
+
     if (ascii >= 65 && ascii <= 90) {
       //Grossbuchstabe
+      result.push(currentElement)
+    } else if (ascii >= 97 && ascii <= 122) {
+      //Kleinbuchstabe
       result.push(currentElement)
     } else if (ascii === 32) {
       //Leerzeichen
@@ -99,7 +103,7 @@ export function aufgabe04(args) {
     const nextElement = result[i + 1]
 
     if (currentElement === " " && nextElement === " ") {
-      // Hier sind zwei Leerzeichen hintereinander, wir ignorieren das Erste.
+      // Hier  sind zwei Leerzeichen hintereinander, wir ignorieren das Erste.
     } else {
       result2.push(currentElement)
     }
@@ -108,7 +112,7 @@ export function aufgabe04(args) {
   let count = 0
   for (let i = 0; i < result2.length; i++) {
     const currentElement = result2[i]
-    if (result2[i] === " ") {
+    if (currentElement === " ") {
       count++
     }
   }

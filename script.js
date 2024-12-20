@@ -516,7 +516,7 @@ export function aufgabe31(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
-// Überprüft ob ein Wort ein Palindrom ist
+// Überprüft ob ein Wort ein Palindrom ist. Wenn nicht im Input steht, wird mit true geantwortet, weil nix umgekehrt ja auch nix ist.
 
 export function Selectionsort(args) {
   const input = args.split("")

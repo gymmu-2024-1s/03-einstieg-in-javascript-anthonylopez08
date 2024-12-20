@@ -388,10 +388,29 @@ linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
 export function aufgabe25(args) {
   const input = args
-  const middleIndex = Math.floor(input.length / 2)
-  return input.substring(0, middleIndex) + input.substring(middleIndex + 1) //Gibt das Zeichen vor und nachdem entfernten zeichen wieder zurück
+  const result = []
+  const inputLength = input.length // Gibt die Länge des Inputs an
+  const middleIndex = Math.floor(inputLength / 2) // rechnet anzahl der zeichen im Input durch 2
+
+  for (let i = 0; i < inputLength; i++) {
+    const currentElement = input[i]
+    if (inputLength % 2 === 0) {
+      if (i === middleIndex - 1 || i === middleIndex) {
+        // Wenn es ein gerade Anzahl an Zeichen gibt, überspringe das mittlere Zeichen
+        continue // Überspringt das mittlere Zeichen
+      }
+    } else {
+      if (i === middleIndex) {
+        // Wenn es eine ungerade Anzahl an Zeichen gibt, überspringt es das mittlere Zeichen
+        continue // Überspringt das mittlere Zeichen
+      }
+    }
+    result.push(currentElement)
+  }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+// "const inputLength = input.length " gibt die Länge des Inputs an. "const middleIndex = Math.floor(inputLength / 2)" berechnet die Position des mittleren Zeichens im Input. Das macht es indem es die Anzahl Zeichen durch 2 teilt. Bei einer geraden Anzahl an Zeichen wird die ausgerechnete Stelle übersprungen. Wegen diesem Überspringen, gibt es zwei Zeichen zurück. Dies geschieht durch folgende Zeilen: if (inputLength % 2 === 0) & {if (i === middleIndex - 1 || i === middleIndex)Bei einer ungeraden Anzahl der Zeichen wird die Anzahl der zeichen durch 2 geteilt und dann aufgerundet. Das führt dazu dass das mittlere Zeichen nicht herausgegeben wird. Dies passiert durch: if (i === middleIndex). Dazu muss noch am Ende dieser Zeilen ein "continue" hin. Dieses macht die Aktion und sorgt dafür dass das/die mittlere/n Zeichen nicht zurückgegeben werden.
 
 export function aufgabe26(args) {
   const input = args
